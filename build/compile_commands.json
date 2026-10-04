@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/main.cpp.o -c /home/kali/projectos/BlueBoy/src/main.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/main.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/core/config.cpp.o -c /home/kali/projectos/BlueBoy/src/core/config.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/core/config.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/core/config.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/core/framework.cpp.o -c /home/kali/projectos/BlueBoy/src/core/framework.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/core/framework.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/core/framework.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/core/logger.cpp.o -c /home/kali/projectos/BlueBoy/src/core/logger.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/core/logger.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/core/logger.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/core/module.cpp.o -c /home/kali/projectos/BlueBoy/src/core/module.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/core/module.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/core/module.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/dos/bluesmack.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/dos/bluesmack.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/dos/bluesmack.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/dos/bluesmack.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/dos/braktooth.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/dos/braktooth.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/dos/braktooth.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/dos/braktooth.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/dos/l2cap_flood.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/dos/l2cap_flood.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/dos/l2cap_flood.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/dos/l2cap_flood.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/exploitation/blueborne.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/exploitation/blueborne.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/exploitation/blueborne.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/exploitation/blueborne.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/exploitation/blueducky.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/exploitation/blueducky.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/exploitation/blueducky.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/exploitation/blueducky.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/exploitation/bluefrag.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/exploitation/bluefrag.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/exploitation/bluefrag.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/exploitation/bluefrag.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/exploitation/knob.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/exploitation/knob.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/exploitation/knob.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/exploitation/knob.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/exploitation/sweyντooth.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/exploitation/sweyντooth.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/exploitation/sweyντooth.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/exploitation/sweyντooth.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/mitm/bias.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/mitm/bias.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/mitm/bias.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/mitm/bias.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/mitm/bluejacking.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/mitm/bluejacking.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/mitm/bluejacking.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/mitm/bluejacking.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/persistence/bluebug.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/persistence/bluebug.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/persistence/bluebug.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/persistence/bluebug.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/privesc/bluecrack.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/privesc/bluecrack.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/privesc/bluecrack.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/privesc/bluecrack.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/reconnaissance/bluesnarf.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/reconnaissance/bluesnarf.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/reconnaissance/bluesnarf.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/reconnaissance/bluesnarf.cpp.o"
+},
+{
+  "directory": "/home/kali/projectos/BlueBoy/build",
+  "command": "/usr/bin/clang++-18 -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -I/home/kali/projectos/BlueBoy/include -I/home/kali/projectos/BlueBoy/src  -Wall -Wextra -O2 -g -g -DDEBUG -std=gnu++17 -o CMakeFiles/blueboy.dir/src/modules/reconnaissance/bluesniff.cpp.o -c /home/kali/projectos/BlueBoy/src/modules/reconnaissance/bluesniff.cpp",
+  "file": "/home/kali/projectos/BlueBoy/src/modules/reconnaissance/bluesniff.cpp",
+  "output": "CMakeFiles/blueboy.dir/src/modules/reconnaissance/bluesniff.cpp.o"
+}
+]

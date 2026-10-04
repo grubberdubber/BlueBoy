@@ -1,0 +1,7 @@
+/home/kali/projectos/BlueBoy/CMakeFiles/blueboy.dir
+/home/kali/projectos/BlueBoy/CMakeFiles/edit_cache.dir
+/home/kali/projectos/BlueBoy/CMakeFiles/rebuild_cache.dir
+/home/kali/projectos/BlueBoy/CMakeFiles/list_install_components.dir
+/home/kali/projectos/BlueBoy/CMakeFiles/install.dir
+/home/kali/projectos/BlueBoy/CMakeFiles/install/local.dir
+/home/kali/projectos/BlueBoy/CMakeFiles/install/strip.dir

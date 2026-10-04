@@ -1,0 +1,44 @@
+# BlueBoy Framework - Dependencias del Sistema
+# Este archivo lista las dependencias necesarias para compilar y ejecutar el framework
+
+# Dependencias de desarrollo (Ubuntu/Debian)
+# Instalar con: sudo apt-get install <package>
+
+# Compiladores y herramientas de build
+build-essential
+cmake
+make
+pkg-config
+
+# Librerías de Bluetooth
+libbluetooth-dev
+bluez
+bluez-tools
+
+# Librerías de red
+libpcap-dev
+libpcap0.8
+
+# Boost libraries
+libboost-all-dev
+libboost-system-dev
+libboost-filesystem-dev
+libboost-program-options-dev
+libboost-thread-dev
+
+# Otras dependencias
+libssl-dev
+libcrypto++-dev
+libglib2.0-dev
+
+# Herramientas opcionales para desarrollo
+git
+vim
+gdb
+valgrind
+
+# Para distribuciones Red Hat/CentOS/Fedora:
+# bluez-libs-devel
+# libpcap-devel
+# boost-devel
+# openssl-devel
