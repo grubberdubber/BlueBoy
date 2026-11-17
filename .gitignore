@@ -1,10 +1,10 @@
-# Build output
+# Build output (out-of-tree only; the root Makefile is tracked)
 build/
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 compile_commands.json
-Makefile
+CMakeUserPresets.json
 
 # Generated assessment artefacts
 output/

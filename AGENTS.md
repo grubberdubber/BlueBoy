@@ -100,6 +100,8 @@ propose the closest publishable alternative.
 ├── include/core/              # public headers
 ├── config/                    # default.conf, scope.conf, advisories.conf
 ├── tests/                     # test_core.cpp (CTest)
+├── assets/                    # README banners and the pipeline diagram (SVG)
+├── Makefile                   # build wrapper: make / make test / make run
 └── CMakeLists.txt
 ```
 
