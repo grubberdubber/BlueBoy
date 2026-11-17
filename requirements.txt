@@ -1,44 +1,23 @@
-# BlueBoy Framework - Dependencias del Sistema
-# Este archivo lista las dependencias necesarias para compilar y ejecutar el framework
+# BlueBoy build and runtime dependencies
+#
+# BlueBoy is a C++17 project that links against BlueZ (libbluetooth).
+# There are no Python, Rust or Node dependencies.
 
-# Dependencias de desarrollo (Ubuntu/Debian)
-# Instalar con: sudo apt-get install <package>
+# Build toolchain
+cmake >= 3.16
+g++ (or clang++) with C++17 support
+make (or ninja)
 
-# Compiladores y herramientas de build
-build-essential
-cmake
-make
-pkg-config
+# Runtime / link dependency
+bluez                      # BlueZ stack, provides libbluetooth
+libbluetooth (headers)     # bluetooth/bluetooth.h, hci.h, sdp.h
 
-# Librerías de Bluetooth
-libbluetooth-dev
-bluez
-bluez-tools
+# Optional, for manual verification of findings
+bluez-utils                # bluetoothctl, hciconfig
 
-# Librerías de red
-libpcap-dev
-libpcap0.8
-
-# Boost libraries
-libboost-all-dev
-libboost-system-dev
-libboost-filesystem-dev
-libboost-program-options-dev
-libboost-thread-dev
-
-# Otras dependencias
-libssl-dev
-libcrypto++-dev
-libglib2.0-dev
-
-# Herramientas opcionales para desarrollo
-git
-vim
-gdb
-valgrind
-
-# Para distribuciones Red Hat/CentOS/Fedora:
-# bluez-libs-devel
-# libpcap-devel
-# boost-devel
-# openssl-devel
+# Arch:
+#   sudo pacman -S base-devel cmake bluez bluez-libs bluez-utils
+# Debian/Ubuntu:
+#   sudo apt install build-essential cmake libbluetooth-dev bluez bluez-tools
+# Fedora:
+#   sudo dnf install gcc-c++ cmake bluez-libs-devel bluez

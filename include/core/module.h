@@ -1,74 +1,73 @@
-#ifndef MODULE_H
-#define MODULE_H
-
-#include "blueboy.h"
+#pragma once
+#include <memory>
 #include <string>
 #include <vector>
-#include <functional>
-#include <map>
 
-namespace BlueBoy {
+namespace blueboy {
+
+class Config;
+
+struct ModuleContext {
+  std::string target; // remote BD_ADDR, empty when the module is local only
+  std::string iface;  // hciX
+  std::string output_dir;
+  bool verbose = false;
+  bool debug = false;
+  Config *config = nullptr;
+};
+
+struct ModuleResult {
+  bool success = false;
+  std::string summary;
+  std::vector<std::string> details;         // observations
+  std::vector<std::string> recommendations; // hardening guidance
+
+  void add(const std::string &d) { details.push_back(d); }
+  void advise(const std::string &r) { recommendations.push_back(r); }
+};
 
 class Module {
 public:
-    Module(const std::string& name, VulnCategory category, Severity severity);
-    virtual ~Module() = default;
+  virtual ~Module() = default;
 
-    // Module information
-    const std::string& getName() const { return name_; }
-    VulnCategory getCategory() const { return category_; }
-    Severity getSeverity() const { return severity_; }
-    const std::string& getDescription() const { return description_; }
-    const std::vector<std::string>& getReferences() const { return references_; }
+  virtual std::string name() const = 0;
+  virtual std::string category() const = 0;
+  virtual std::string description() const = 0;
+  virtual std::string cve() const { return "-"; }
+  virtual std::string requirements() const { return "-"; }
 
-    // Module execution
-    virtual ModuleResult execute(const BluetoothTarget& target) = 0;
-    virtual bool validate(const BluetoothTarget& target) = 0;
-    
-    // Module configuration
-    virtual void setOption(const std::string& key, const std::string& value);
-    virtual std::string getOption(const std::string& key) const;
-    virtual std::vector<std::string> getRequiredOptions() const;
+  /// Local-only modules (e.g. adapter posture) do not need -t.
+  virtual bool needs_target() const { return true; }
 
-protected:
-    void setDescription(const std::string& description) { description_ = description; }
-    void addReference(const std::string& reference) { references_.push_back(reference); }
-    
-    // Utility functions for modules
-    bool isValidMacAddress(const std::string& mac) const;
-    std::string formatMacAddress(const std::string& mac) const;
-    bool pingTarget(const BluetoothTarget& target) const;
-    
-private:
-    std::string name_;
-    VulnCategory category_;
-    Severity severity_;
-    std::string description_;
-    std::vector<std::string> references_;
-    std::map<std::string, std::string> options_;
+  /// Active modules that can disrupt or alter a peer. They are gated behind
+  /// --lab, a mandatory allowlist and explicit per-target confirmation.
+  virtual bool offensive() const { return false; }
+
+  /// One-line statement of the real-world effect, shown before execution.
+  virtual std::string impact() const { return {}; }
+
+  virtual ModuleResult run(const ModuleContext &ctx) = 0;
 };
 
-// Module factory for dynamic loading
-class ModuleFactory {
+class ModuleRegistry {
 public:
-    static std::unique_ptr<Module> createModule(const std::string& module_name);
-    static std::vector<std::string> getAvailableModules();
-    static void registerModule(const std::string& name, 
-                              std::function<std::unique_ptr<Module>()> creator);
+  static ModuleRegistry &instance();
+
+  void add(std::unique_ptr<Module> m);
+  Module *get(const std::string &name);
+  std::vector<Module *> all();
+  std::vector<Module *> by_category(const std::string &cat);
+  std::vector<std::string> categories();
 
 private:
-    static std::map<std::string, std::function<std::unique_ptr<Module>()>> creators_;
+  ModuleRegistry() = default;
+  std::vector<std::unique_ptr<Module>> modules_;
 };
 
-// Macro for easy module registration
-#define REGISTER_MODULE(name, class_name) \
-    static bool registered_##class_name = []() { \
-        ModuleFactory::registerModule(name, []() { \
-            return std::make_unique<class_name>(); \
-        }); \
-        return true; \
-    }();
+} // namespace blueboy
 
-} // namespace BlueBoy
-
-#endif // MODULE_H
+#define REGISTER_MODULE(TYPE)                                                  \
+  static const bool _bb_reg_##TYPE = []() {                                    \
+    ::blueboy::ModuleRegistry::instance().add(std::make_unique<TYPE>());       \
+    return true;                                                               \
+  }()

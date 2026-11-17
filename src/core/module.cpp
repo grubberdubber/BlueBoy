@@ -1,71 +1,58 @@
 #include "core/module.h"
-#include <regex>
 #include <algorithm>
 #include <cctype>
 
-namespace BlueBoy {
+namespace blueboy {
 
-// Static member initialization
-std::map<std::string, std::function<std::unique_ptr<Module>()>> ModuleFactory::creators_;
-
-Module::Module(const std::string& name, VulnCategory category, Severity severity)
-    : name_(name), category_(category), severity_(severity) {
+ModuleRegistry &ModuleRegistry::instance() {
+  static ModuleRegistry r;
+  return r;
 }
 
-void Module::setOption(const std::string& key, const std::string& value) {
-    options_[key] = value;
+void ModuleRegistry::add(std::unique_ptr<Module> m) {
+  if (m)
+    modules_.push_back(std::move(m));
 }
 
-std::string Module::getOption(const std::string& key) const {
-    auto it = options_.find(key);
-    return (it != options_.end()) ? it->second : "";
+Module *ModuleRegistry::get(const std::string &name) {
+  std::string want = name;
+  std::transform(want.begin(), want.end(), want.begin(),
+                 [](unsigned char c) { return std::tolower(c); });
+  for (auto &m : modules_) {
+    std::string have = m->name();
+    std::transform(have.begin(), have.end(), have.begin(),
+                   [](unsigned char c) { return std::tolower(c); });
+    if (have == want)
+      return m.get();
+  }
+  return nullptr;
 }
 
-std::vector<std::string> Module::getRequiredOptions() const {
-    // Default implementation - modules can override
-    return {};
+std::vector<Module *> ModuleRegistry::all() {
+  std::vector<Module *> v;
+  v.reserve(modules_.size());
+  for (auto &m : modules_)
+    v.push_back(m.get());
+  std::sort(v.begin(), v.end(),
+            [](Module *a, Module *b) { return a->name() < b->name(); });
+  return v;
 }
 
-bool Module::isValidMacAddress(const std::string& mac) const {
-    std::regex mac_regex("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$");
-    return std::regex_match(mac, mac_regex);
+std::vector<Module *> ModuleRegistry::by_category(const std::string &cat) {
+  std::vector<Module *> v;
+  for (auto &m : modules_)
+    if (m->category() == cat)
+      v.push_back(m.get());
+  return v;
 }
 
-std::string Module::formatMacAddress(const std::string& mac) const {
-    std::string formatted = mac;
-    std::transform(formatted.begin(), formatted.end(), formatted.begin(), ::toupper);
-    
-    // Replace any separators with colons
-    std::replace(formatted.begin(), formatted.end(), '-', ':');
-    
-    return formatted;
+std::vector<std::string> ModuleRegistry::categories() {
+  std::vector<std::string> v;
+  for (auto &m : modules_)
+    if (std::find(v.begin(), v.end(), m->category()) == v.end())
+      v.push_back(m->category());
+  std::sort(v.begin(), v.end());
+  return v;
 }
 
-bool Module::pingTarget(const BluetoothTarget& target) const {
-    // Simulate ping - in real implementation, use L2CAP ping
-    return !target.mac_address.empty();
-}
-
-// ModuleFactory implementation
-std::unique_ptr<Module> ModuleFactory::createModule(const std::string& module_name) {
-    auto it = creators_.find(module_name);
-    if (it != creators_.end()) {
-        return it->second();
-    }
-    return nullptr;
-}
-
-std::vector<std::string> ModuleFactory::getAvailableModules() {
-    std::vector<std::string> modules;
-    for (const auto& pair : creators_) {
-        modules.push_back(pair.first);
-    }
-    return modules;
-}
-
-void ModuleFactory::registerModule(const std::string& name, 
-                                  std::function<std::unique_ptr<Module>()> creator) {
-    creators_[name] = creator;
-}
-
-} // namespace BlueBoy
+} // namespace blueboy

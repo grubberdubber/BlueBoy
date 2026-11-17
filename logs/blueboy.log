@@ -1,17 +1,380 @@
-[2025-07-29 17:26:45.110] [INFO] Configuration loaded successfully
-[2025-07-29 17:26:45.110] [INFO] Loaded 7 modules
-[2025-07-29 17:26:45.110] [INFO] BlueBoy Framework initialized
-[2025-07-29 17:26:45.110] [INFO] BlueBoy Framework shutting down
-[2025-07-29 17:26:52.043] [INFO] Configuration loaded successfully
-[2025-07-29 17:26:52.043] [INFO] Loaded 7 modules
-[2025-07-29 17:26:52.043] [INFO] BlueBoy Framework initialized
-[2025-07-29 17:26:52.043] [INFO] BlueBoy Framework shutting down
-[2025-07-29 17:26:58.106] [INFO] Configuration loaded successfully
-[2025-07-29 17:26:58.107] [INFO] Loaded 7 modules
-[2025-07-29 17:26:58.107] [INFO] BlueBoy Framework initialized
-[2025-07-29 17:26:58.107] [INFO] Scanning for Bluetooth devices...
-[2025-07-29 17:26:58.107] [INFO] Found 2 devices
-[2025-07-29 17:26:58.107] [INFO] BlueBoy Framework shutting down
-[2025-07-29 17:27:08.160] [INFO] Configuration loaded successfully
-[2025-07-29 17:27:08.161] [INFO] Loaded 7 modules
-[2025-07-29 17:27:08.161] [INFO] BlueBoy Framework initialized
+[2026-11-16 19:52:37.942] [ERROR] No consent token and no terminal to prompt on.
+[2026-11-16 19:52:37.942] [ERROR] Re-run with --accept-terms once you have read the disclaimer.
+[2026-11-16 19:52:37.945] [INFO] Consent recorded in /home/arch/.config/blueboy/.accepted
+[2026-11-16 19:52:37.945] [INFO] Loaded 6 module(s)
+[2026-11-16 19:52:37.945] [ERROR] Adapter not found: hci0
+[2026-11-16 19:52:55.790] [ERROR] No consent token and no terminal to prompt on.
+[2026-11-16 19:52:55.790] [ERROR] Re-run with --accept-terms once you have read the disclaimer.
+[2026-11-16 19:52:55.792] [INFO] Consent recorded in /tmp/bb-home/.config/blueboy/.accepted
+[2026-11-16 19:52:55.793] [INFO] Loaded 6 module(s)
+[2026-11-16 19:52:55.793] [ERROR] Adapter not found: hci0
+[2026-11-16 19:53:04.651] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:04.651] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:04.651] [ERROR] Target 11:22:33:44:55:66 is outside the authorised scope allowlist
+[2026-11-16 19:53:04.651] [ERROR] Add it to the scope file only if the rules of engagement cover it
+[2026-11-16 19:53:04.653] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:04.654] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:04.654] [INFO] Running module 'sdp_enum' against AA:BB:CC:DD:EE:FF
+[2026-11-16 19:53:04.656] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:04.656] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:04.656] [ERROR] Invalid BD_ADDR: AA:BB:CC;rm -rf / (expected AA:BB:CC:DD:EE:FF)
+[2026-11-16 19:53:04.659] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:04.659] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:04.659] [INFO] Running module 'adapter_posture'
+[2026-11-16 19:53:17.766] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:17.766] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:17.766] [INFO] Running module 'adapter_posture'
+[2026-11-16 19:53:17.768] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:17.768] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:17.769] [INFO] Running module 'adapter_posture'
+[2026-11-16 19:53:58.905] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 19:53:58.905] [INFO] Loaded 6 module(s)
+[2026-11-16 19:53:58.905] [INFO] Running module 'service_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-16 19:54:12.463] [ERROR] No consent token and no terminal to prompt on.
+[2026-11-16 19:54:12.463] [ERROR] Re-run with --accept-terms once you have read the disclaimer.
+[2026-11-16 20:42:45.542] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:45.542] [ERROR] 'bluesmack' is an offensive module. This is an offensive module. Re-run with --lab and read its impact statement first.
+[2026-11-16 20:42:45.546] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 20:42:45.546] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:45.546] [ERROR] 'bluesmack' is an offensive module. This is an offensive module. Re-run with --lab and read its impact statement first.
+[2026-11-16 20:42:45.550] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 20:42:45.550] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:45.550] [ERROR] Offensive modules need per-target confirmation.
+[2026-11-16 20:42:45.550] [ERROR] Re-run with --confirm AA:BB:CC:DD:EE:FF to acknowledge the impact.
+[2026-11-16 20:42:45.554] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 20:42:45.554] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:45.554] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-16 20:42:45.558] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 20:42:45.559] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:45.559] [ERROR] Category 'offensive' contains offensive modules. Re-run with --lab, an enforced scope and --confirm.
+[2026-11-16 20:42:53.679] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:53.680] [ERROR] 'bluesmack' is an offensive module. Offensive modules require [scope] enforce = true with a non-empty allowlist_file. Fix the config before testing anything.
+[2026-11-16 20:42:53.687] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 20:42:53.687] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:53.688] [ERROR] --confirm does not match the target (AA:BB:CC:DD:EE:FF)
+[2026-11-16 20:42:58.999] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-16 20:42:58.999] [INFO] Loaded 19 module(s)
+[2026-11-16 20:42:59.000] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-16 21:02:09.698] [INFO] Loaded 19 module(s)
+[2026-11-16 21:02:09.698] [INFO] BR/EDR inquiry on hci0 for 10s (bounded, passive listening)
+[2026-11-16 21:04:05.630] [INFO] Loaded 19 module(s)
+[2026-11-16 21:04:05.631] [INFO] BR/EDR inquiry on hci0 for 10s (bounded, passive listening)
+[2026-11-16 21:04:32.163] [INFO] Loaded 19 module(s)
+[2026-11-16 21:06:03.703] [INFO] Loaded 19 module(s)
+[2026-11-16 21:08:33.275] [INFO] Loaded 19 module(s)
+[2026-11-16 21:08:33.275] [INFO] Running module 'sdp_enum' against 14:BB:6E:33:BC:61
+[2026-11-16 21:09:27.424] [INFO] Loaded 19 module(s)
+[2026-11-16 21:09:27.425] [INFO] Running module 'sdp_enum' against 40:16:3B:F0:41:A7
+[2026-11-17 10:43:55.902] [INFO] Loaded 19 module(s)
+[2026-11-17 10:45:24.800] [INFO] Loaded 19 module(s)
+[2026-11-17 10:45:24.800] [INFO] BR/EDR inquiry on hci0 for 10s (bounded, passive listening)
+[2026-11-17 10:47:04.388] [INFO] Loaded 19 module(s)
+[2026-11-17 10:47:04.389] [ERROR] 'knob' is an offensive module. This is an offensive module. Re-run with --lab and read its impact statement first.
+[2026-11-17 10:47:19.864] [INFO] Loaded 19 module(s)
+[2026-11-17 10:47:19.864] [ERROR] 'knob' is an offensive module. Offensive modules require [scope] enforce = true with a non-empty allowlist_file. Fix the config before testing anything.
+[2026-11-17 10:50:55.603] [INFO] Consent recorded in /tmp/bb-home/.config/blueboy/.accepted
+[2026-11-17 10:50:55.603] [INFO] Loaded 19 module(s)
+[2026-11-17 10:50:55.603] [ERROR] 'bluesmack' is an offensive module. This is an offensive module. Re-run with --lab and read its impact statement first.
+[2026-11-17 10:50:55.608] [INFO] Loaded 19 module(s)
+[2026-11-17 10:50:55.884] [INFO] Loaded 19 module(s)
+[2026-11-17 10:50:55.884] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 10:50:55.885] [WARN] Could not write report for bluesmack
+[2026-11-17 10:50:56.156] [WARN] Config not found (/tmp/bb-cfg/strict.conf), using defaults
+[2026-11-17 10:50:56.156] [INFO] Loaded 19 module(s)
+[2026-11-17 10:50:56.156] [INFO] Running module 'bluesmack' against 11:22:33:44:55:66
+[2026-11-17 10:50:56.156] [WARN] Could not write report for bluesmack
+[2026-11-17 10:50:56.159] [WARN] Config not found (/tmp/bb-cfg/strict.conf), using defaults
+[2026-11-17 10:50:56.159] [INFO] Loaded 19 module(s)
+[2026-11-17 10:50:56.159] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 10:50:56.159] [WARN] Could not write report for bluesmack
+[2026-11-17 10:51:26.481] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 10:51:26.481] [INFO] Loaded 19 module(s)
+[2026-11-17 10:51:26.481] [ERROR] Target 11:22:33:44:55:66 is outside the authorised scope allowlist
+[2026-11-17 10:51:26.481] [ERROR] Add it to the scope file only if the rules of engagement cover it
+[2026-11-17 10:51:26.485] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 10:51:26.485] [INFO] Loaded 19 module(s)
+[2026-11-17 10:51:26.486] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 10:51:26.491] [INFO] Loaded 19 module(s)
+[2026-11-17 10:51:26.491] [ERROR] Category 'offensive' contains offensive modules. Re-run with --lab.
+[2026-11-17 11:03:27.898] [INFO] Loaded 19 module(s)
+[2026-11-17 11:07:56.093] [INFO] Loaded 21 module(s)
+[2026-11-17 11:07:56.093] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:07:56.103] [WARN] Could not write report for bt_privesc
+[2026-11-17 11:08:01.791] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:01.791] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:08:01.799] [WARN] Could not write report for bt_privesc
+[2026-11-17 11:08:01.802] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:01.802] [INFO] Running module 'rce_exposure' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:08:06.932] [WARN] Could not write report for rce_exposure
+[2026-11-17 11:08:34.790] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:34.790] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:08:34.804] [DEBUG] Configuration loaded: config/default.conf
+[2026-11-17 11:08:34.804] [DEBUG] Consent token found: version=1
+[2026-11-17 11:08:34.804] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:34.805] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:08:47.667] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:47.667] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:08:47.682] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:47.682] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:08:47.772] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:47.772] [INFO] Running module 'bias' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:08:47.811] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:47.811] [INFO] Running module 'blueborne' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:08:52.949] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:52.949] [INFO] Running module 'bluebug' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:08:58.085] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:58.085] [INFO] Running module 'bluecrack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:08:58.093] [INFO] Loaded 21 module(s)
+[2026-11-17 11:08:58.094] [INFO] Running module 'blueducky' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:09:03.231] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:03.231] [INFO] Running module 'bluefrag' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:09:08.367] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:08.367] [INFO] Running module 'bluejacking' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:09:28.378] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:28.379] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:09:28.386] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:28.386] [INFO] Running module 'bluesnarf' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:09:48.401] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:48.401] [INFO] Running module 'braktooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:09:50.416] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:50.416] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:09:50.433] [INFO] Loaded 21 module(s)
+[2026-11-17 11:09:50.433] [INFO] Running module 'discover'
+[2026-11-17 11:10:14.086] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:14.087] [INFO] Running module 'knob' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:10:14.120] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:14.120] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:10:14.128] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:14.128] [INFO] Running module 'l2cap_flood' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:10:17.139] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:17.139] [INFO] Running module 'le_scan'
+[2026-11-17 11:10:17.148] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:17.148] [INFO] Running module 'rce_exposure' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:10:22.287] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:22.287] [INFO] Running module 'sdp_enum' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:10:27.424] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:27.424] [INFO] Running module 'service_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:10:32.559] [INFO] Loaded 21 module(s)
+[2026-11-17 11:10:32.559] [INFO] Running module 'sweyntooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:12:17.055] [INFO] Loaded 21 module(s)
+[2026-11-17 11:12:17.055] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:12:54.488] [INFO] Loaded 21 module(s)
+[2026-11-17 11:12:54.488] [INFO] BR/EDR inquiry on hci0 for 10s (bounded, passive listening)
+[2026-11-17 11:13:18.207] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:18.207] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:13:42.403] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:42.403] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:13:42.485] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:42.485] [INFO] Running module 'bias' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:13:42.515] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:42.515] [INFO] Running module 'blueborne' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:13:47.655] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:47.655] [INFO] Running module 'bluebug' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:13:52.787] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:52.787] [INFO] Running module 'bluecrack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:13:52.793] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:52.793] [INFO] Running module 'blueducky' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:13:57.927] [INFO] Loaded 21 module(s)
+[2026-11-17 11:13:57.927] [INFO] Running module 'bluefrag' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:14:03.061] [INFO] Loaded 21 module(s)
+[2026-11-17 11:14:03.061] [INFO] Running module 'bluejacking' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:14:23.070] [INFO] Loaded 21 module(s)
+[2026-11-17 11:14:23.071] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:14:23.077] [INFO] Loaded 21 module(s)
+[2026-11-17 11:14:23.077] [INFO] Running module 'bluesnarf' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:14:43.089] [INFO] Loaded 21 module(s)
+[2026-11-17 11:14:43.089] [INFO] Running module 'braktooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:14:45.104] [INFO] Loaded 21 module(s)
+[2026-11-17 11:14:45.104] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:14:45.118] [INFO] Loaded 21 module(s)
+[2026-11-17 11:14:45.118] [INFO] Running module 'discover'
+[2026-11-17 11:15:10.530] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:10.530] [INFO] Running module 'knob' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:15:10.566] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:10.567] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:15:10.573] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:10.574] [INFO] Running module 'l2cap_flood' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:15:13.584] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:13.584] [INFO] Running module 'le_scan'
+[2026-11-17 11:15:13.590] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:13.590] [INFO] Running module 'rce_exposure' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:15:18.743] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:18.743] [INFO] Running module 'sdp_enum' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:15:23.877] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:23.877] [INFO] Running module 'service_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:15:29.011] [INFO] Loaded 21 module(s)
+[2026-11-17 11:15:29.011] [INFO] Running module 'sweyntooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:19:03.711] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:03.714] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:03.717] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:10.108] [INFO] Loaded 21 module(s)
+[2026-11-17 11:19:10.111] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:10.111] [INFO] Loaded 21 module(s)
+[2026-11-17 11:19:10.114] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:10.114] [WARN] Skipping invalid address on line 4: bad-line
+[2026-11-17 11:19:10.114] [INFO] Loaded 21 module(s)
+[2026-11-17 11:19:10.114] [INFO] Target 11:22:33:44:55:66 matches --exclude '11:*', skipping
+[2026-11-17 11:19:10.118] [ERROR] -L/--targets needs -m <module> or --category <name>
+[2026-11-17 11:19:40.292] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:40.293] [WARN] Skipping invalid address on line 4: bad-line
+[2026-11-17 11:19:40.293] [INFO] Loaded 21 module(s)
+[2026-11-17 11:19:40.293] [WARN] Skipping 11:22:33:44:55:66 (--exclude '11:*')
+[2026-11-17 11:19:40.295] [INFO] Scope enforcement active (1 pattern(s), source: /tmp/bb-cfg/scope.conf)
+[2026-11-17 11:19:40.295] [WARN] Skipping invalid address on line 4: bad-line
+[2026-11-17 11:19:40.295] [INFO] Loaded 21 module(s)
+[2026-11-17 11:19:40.295] [WARN] Skipping AA:BB:CC:DD:EE:FF (--exclude '*')
+[2026-11-17 11:19:40.295] [WARN] Skipping 11:22:33:44:55:66 (--exclude '*')
+[2026-11-17 11:19:40.295] [ERROR] Every target was skipped (excluded or out of scope)
+[2026-11-17 11:19:40.297] [INFO] Loaded 21 module(s)
+[2026-11-17 11:19:40.297] [INFO] Target AA:BB:CC:DD:EE:FF matches --exclude 'AA:*', skipping
+[2026-11-17 11:20:02.753] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:02.754] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:20:02.834] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:02.834] [INFO] Running module 'bias' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:02.863] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:02.863] [INFO] Running module 'blueborne' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:07.998] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:07.998] [INFO] Running module 'bluebug' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:13.137] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:13.137] [INFO] Running module 'bluecrack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:13.142] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:13.142] [INFO] Running module 'blueducky' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:18.275] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:18.275] [INFO] Running module 'bluefrag' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:23.409] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:23.409] [INFO] Running module 'bluejacking' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:43.416] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:43.416] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:20:43.422] [INFO] Loaded 21 module(s)
+[2026-11-17 11:20:43.422] [INFO] Running module 'bluesnarf' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:03.433] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:03.433] [INFO] Running module 'braktooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:05.443] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:05.443] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:21:05.459] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:05.459] [INFO] Running module 'discover'
+[2026-11-17 11:21:14.548] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:14.548] [INFO] Running module 'knob' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:14.577] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:14.577] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:14.584] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:14.584] [INFO] Running module 'l2cap_flood' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:17.595] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:17.595] [INFO] Running module 'le_scan'
+[2026-11-17 11:21:17.600] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:17.601] [INFO] Running module 'rce_exposure' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:22.733] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:22.733] [INFO] Running module 'sdp_enum' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:27.866] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:27.866] [INFO] Running module 'service_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:21:32.998] [INFO] Loaded 21 module(s)
+[2026-11-17 11:21:32.999] [INFO] Running module 'sweyntooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:22:03.982] [INFO] Loaded 21 module(s)
+[2026-11-17 11:22:03.982] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:22:22.775] [INFO] Loaded 21 module(s)
+[2026-11-17 11:28:50.212] [INFO] Loaded 23 module(s)
+[2026-11-17 11:28:50.212] [INFO] Running module 'link_key_inventory'
+[2026-11-17 11:28:50.215] [INFO] Loaded 23 module(s)
+[2026-11-17 11:28:50.215] [INFO] Running module 'link_key_inventory'
+[2026-11-17 11:28:57.334] [INFO] Loaded 23 module(s)
+[2026-11-17 11:28:57.334] [INFO] Running module 'psm_scan' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:28:57.342] [INFO] Loaded 23 module(s)
+[2026-11-17 11:28:57.342] [INFO] Running module 'discover'
+[2026-11-17 11:29:34.584] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:34.584] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:29:34.666] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:34.666] [INFO] Running module 'bias' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:29:34.697] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:34.697] [INFO] Running module 'blueborne' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:29:39.835] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:39.835] [INFO] Running module 'bluebug' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:29:44.968] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:44.968] [INFO] Running module 'bluecrack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:29:44.974] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:44.974] [INFO] Running module 'blueducky' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:29:50.106] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:50.106] [INFO] Running module 'bluefrag' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:29:55.239] [INFO] Loaded 23 module(s)
+[2026-11-17 11:29:55.239] [INFO] Running module 'bluejacking' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:30:15.247] [INFO] Loaded 23 module(s)
+[2026-11-17 11:30:15.247] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:30:15.252] [INFO] Loaded 23 module(s)
+[2026-11-17 11:30:15.253] [INFO] Running module 'bluesnarf' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:30:35.263] [INFO] Loaded 23 module(s)
+[2026-11-17 11:30:35.263] [INFO] Running module 'braktooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:30:37.272] [INFO] Loaded 23 module(s)
+[2026-11-17 11:30:37.272] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:30:37.286] [INFO] Loaded 23 module(s)
+[2026-11-17 11:30:37.286] [INFO] Running module 'discover'
+[2026-11-17 11:31:02.153] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:02.153] [INFO] Running module 'knob' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:02.184] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:02.184] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:02.189] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:02.189] [INFO] Running module 'l2cap_flood' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:05.197] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:05.198] [INFO] Running module 'le_scan'
+[2026-11-17 11:31:05.203] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:05.203] [INFO] Running module 'link_key_inventory'
+[2026-11-17 11:31:05.208] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:05.208] [INFO] Running module 'psm_scan' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:05.213] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:05.213] [INFO] Running module 'rce_exposure' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:10.348] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:10.349] [INFO] Running module 'sdp_enum' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:15.481] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:15.481] [INFO] Running module 'service_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:31:20.615] [INFO] Loaded 23 module(s)
+[2026-11-17 11:31:20.616] [INFO] Running module 'sweyntooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:39:14.420] [INFO] Loaded 23 module(s)
+[2026-11-17 11:39:14.420] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:39:14.498] [INFO] Loaded 23 module(s)
+[2026-11-17 11:39:14.498] [INFO] Running module 'advisory_scan' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:39:25.938] [INFO] Loaded 23 module(s)
+[2026-11-17 11:39:25.938] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:39:55.690] [INFO] Loaded 23 module(s)
+[2026-11-17 11:39:55.690] [INFO] Running module 'adapter_posture'
+[2026-11-17 11:39:55.772] [INFO] Loaded 23 module(s)
+[2026-11-17 11:39:55.772] [INFO] Running module 'advisory_scan' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:00.982] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:00.982] [INFO] Running module 'bias' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:01.065] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:01.065] [INFO] Running module 'blueborne' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:06.195] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:06.196] [INFO] Running module 'bluebug' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:11.327] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:11.327] [INFO] Running module 'bluecrack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:11.332] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:11.332] [INFO] Running module 'blueducky' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:16.463] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:16.463] [INFO] Running module 'bluefrag' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:21.596] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:21.596] [INFO] Running module 'bluejacking' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:41.604] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:41.605] [INFO] Running module 'bluesmack' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:40:41.610] [INFO] Loaded 23 module(s)
+[2026-11-17 11:40:41.610] [INFO] Running module 'bluesnarf' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:01.618] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:01.618] [INFO] Running module 'braktooth' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:03.634] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:03.635] [INFO] Running module 'bt_privesc'
+[2026-11-17 11:41:03.649] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:03.649] [INFO] Running module 'discover'
+[2026-11-17 11:41:21.942] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:21.942] [INFO] Running module 'knob' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:21.972] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:21.973] [INFO] Running module 'l2cap_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:21.977] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:21.978] [INFO] Running module 'l2cap_flood' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:24.988] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:24.988] [INFO] Running module 'le_scan'
+[2026-11-17 11:41:24.994] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:24.994] [INFO] Running module 'link_key_inventory'
+[2026-11-17 11:41:24.999] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:24.999] [INFO] Running module 'psm_scan' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:25.003] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:25.004] [INFO] Running module 'sdp_enum' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:30.138] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:30.138] [INFO] Running module 'service_audit' against AA:BB:CC:DD:EE:FF
+[2026-11-17 11:41:35.272] [INFO] Loaded 23 module(s)
+[2026-11-17 11:41:35.272] [INFO] Running module 'sweyntooth' against AA:BB:CC:DD:EE:FF

@@ -1,48 +1,30 @@
-#ifndef CONFIG_H
-#define CONFIG_H
-
-#include "blueboy.h"
-#include <string>
+#pragma once
 #include <map>
+#include <string>
 
-namespace BlueBoy {
+namespace blueboy {
 
 class Config {
 public:
-    Config();
-    ~Config();
+  bool load(const std::string &path);
 
-    bool loadFromFile(const std::string& config_path);
-    bool saveToFile(const std::string& config_path) const;
-    
-    // Configuration getters
-    std::string getString(const std::string& key, const std::string& default_value = "") const;
-    int getInt(const std::string& key, int default_value = 0) const;
-    bool getBool(const std::string& key, bool default_value = false) const;
-    double getDouble(const std::string& key, double default_value = 0.0) const;
-    
-    // Configuration setters
-    void setString(const std::string& key, const std::string& value);
-    void setInt(const std::string& key, int value);
-    void setBool(const std::string& key, bool value);
-    void setDouble(const std::string& key, double value);
-    
-    // Framework configuration
-    FrameworkConfig getFrameworkConfig() const;
-    void setFrameworkConfig(const FrameworkConfig& config);
-    
-    // Validation
-    bool validateConfig() const;
-    std::vector<std::string> getValidationErrors() const;
+  std::string get(const std::string &section, const std::string &key,
+                  const std::string &def = "") const;
+  int get_int(const std::string &section, const std::string &key,
+              int def = 0) const;
+  bool get_bool(const std::string &section, const std::string &key,
+                bool def = false) const;
+  double get_double(const std::string &section, const std::string &key,
+                    double def = 0.0) const;
+
+  void set(const std::string &section, const std::string &key,
+           const std::string &val);
+  const std::string &path() const { return path_; }
 
 private:
-    void setDefaults();
-    std::string trim(const std::string& str) const;
-    
-    std::map<std::string, std::string> config_values_;
-    mutable std::vector<std::string> validation_errors_;
+  static std::string trim(const std::string &s);
+  std::map<std::string, std::map<std::string, std::string>> data_;
+  std::string path_;
 };
 
-} // namespace BlueBoy
-
-#endif // CONFIG_H
+} // namespace blueboy

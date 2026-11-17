@@ -1,48 +1,46 @@
-#ifndef LOGGER_H
-#define LOGGER_H
-
-#include <string>
+#pragma once
 #include <fstream>
-#include <memory>
+#include <iostream>
 #include <mutex>
+#include <sstream>
+#include <string>
 
-namespace BlueBoy {
+namespace blueboy {
 
-enum class LogLevel {
-    DEBUG,
-    INFO,
-    WARNING,
-    ERROR,
-    CRITICAL
-};
+enum class LogLevel { TRACE, DEBUG, INFO, WARN, ERROR, FATAL };
 
 class Logger {
 public:
-    Logger(const std::string& log_file = "", LogLevel level = LogLevel::INFO);
-    ~Logger();
+  static Logger &instance();
 
-    void setLogLevel(LogLevel level) { log_level_ = level; }
-    void setLogFile(const std::string& log_file);
-    
-    void debug(const std::string& message);
-    void info(const std::string& message);
-    void warning(const std::string& message);
-    void error(const std::string& message);
-    void critical(const std::string& message);
-    
-    void log(LogLevel level, const std::string& message);
+  void set_level(LogLevel lvl);
+  void set_file(const std::string &path);
+  void enable_console(bool on) { console_ = on; }
+
+  void log(LogLevel lvl, const std::string &msg);
 
 private:
-    void writeLog(LogLevel level, const std::string& message);
-    std::string levelToString(LogLevel level) const;
-    std::string getCurrentTimestamp() const;
-    
-    LogLevel log_level_;
-    std::unique_ptr<std::ofstream> log_file_;
-    std::mutex log_mutex_;
-    bool console_output_;
+  Logger() = default;
+  static const char *tag(LogLevel lvl);
+
+  std::mutex mtx_;
+  std::ofstream file_;
+  LogLevel level_ = LogLevel::INFO;
+  bool console_ = true;
 };
 
-} // namespace BlueBoy
+} // namespace blueboy
 
-#endif // LOGGER_H
+#define BB_LOG(LVL, ...)                                                       \
+  do {                                                                         \
+    std::ostringstream _bb_o;                                                  \
+    _bb_o << __VA_ARGS__;                                                      \
+    ::blueboy::Logger::instance().log((LVL), _bb_o.str());                     \
+  } while (0)
+
+#define LOG_TRACE(...) BB_LOG(::blueboy::LogLevel::TRACE, __VA_ARGS__)
+#define LOG_DEBUG(...) BB_LOG(::blueboy::LogLevel::DEBUG, __VA_ARGS__)
+#define LOG_INFO(...) BB_LOG(::blueboy::LogLevel::INFO, __VA_ARGS__)
+#define LOG_WARN(...) BB_LOG(::blueboy::LogLevel::WARN, __VA_ARGS__)
+#define LOG_ERROR(...) BB_LOG(::blueboy::LogLevel::ERROR, __VA_ARGS__)
+#define LOG_FATAL(...) BB_LOG(::blueboy::LogLevel::FATAL, __VA_ARGS__)

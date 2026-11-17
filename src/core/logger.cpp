@@ -1,114 +1,67 @@
 #include "core/logger.h"
-#include <iostream>
-#include <iomanip>
-#include <sstream>
 #include <chrono>
-#include <filesystem>
+#include <ctime>
+#include <iomanip>
 
-namespace BlueBoy {
+namespace blueboy {
 
-Logger::Logger(const std::string& log_file, LogLevel level)
-    : log_level_(level), console_output_(true) {
-    if (!log_file.empty()) {
-        setLogFile(log_file);
-    }
+Logger &Logger::instance() {
+  static Logger l;
+  return l;
 }
 
-Logger::~Logger() {
-    if (log_file_ && log_file_->is_open()) {
-        log_file_->close();
-    }
+const char *Logger::tag(LogLevel lvl) {
+  switch (lvl) {
+  case LogLevel::TRACE:
+    return "TRACE";
+  case LogLevel::DEBUG:
+    return "DEBUG";
+  case LogLevel::INFO:
+    return "INFO";
+  case LogLevel::WARN:
+    return "WARN";
+  case LogLevel::ERROR:
+    return "ERROR";
+  case LogLevel::FATAL:
+    return "FATAL";
+  }
+  return "?";
 }
 
-void Logger::setLogFile(const std::string& log_file) {
-    std::lock_guard<std::mutex> lock(log_mutex_);
-    
-    // Create directory if it doesn't exist
-    std::filesystem::path file_path(log_file);
-    if (file_path.has_parent_path()) {
-        std::filesystem::create_directories(file_path.parent_path());
-    }
-    
-    log_file_ = std::make_unique<std::ofstream>(log_file, std::ios::app);
-    if (!log_file_->is_open()) {
-        std::cerr << "Warning: Could not open log file: " << log_file << std::endl;
-        log_file_.reset();
-    }
+void Logger::set_level(LogLevel lvl) {
+  std::lock_guard<std::mutex> g(mtx_);
+  level_ = lvl;
 }
 
-void Logger::debug(const std::string& message) {
-    log(LogLevel::DEBUG, message);
+void Logger::set_file(const std::string &path) {
+  std::lock_guard<std::mutex> g(mtx_);
+  file_.open(path, std::ios::app);
 }
 
-void Logger::info(const std::string& message) {
-    log(LogLevel::INFO, message);
+void Logger::log(LogLevel lvl, const std::string &msg) {
+  std::lock_guard<std::mutex> g(mtx_);
+  if (static_cast<int>(lvl) < static_cast<int>(level_))
+    return;
+
+  auto now = std::chrono::system_clock::now();
+  std::time_t t = std::chrono::system_clock::to_time_t(now);
+  auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(
+                now.time_since_epoch()) %
+            1000;
+
+  std::tm tm{};
+  localtime_r(&t, &tm);
+  std::ostringstream ts;
+  ts << std::put_time(&tm, "%Y-%m-%d %H:%M:%S") << '.' << std::setfill('0')
+     << std::setw(3) << ms.count();
+
+  std::ostringstream line;
+  line << "[" << ts.str() << "] [" << tag(lvl) << "] " << msg;
+
+  if (console_)
+    std::cout << line.str() << "\n" << std::flush;
+  if (file_.is_open())
+    file_ << line.str() << "\n" << std::flush;
 }
 
-void Logger::warning(const std::string& message) {
-    log(LogLevel::WARNING, message);
-}
-
-void Logger::error(const std::string& message) {
-    log(LogLevel::ERROR, message);
-}
-
-void Logger::critical(const std::string& message) {
-    log(LogLevel::CRITICAL, message);
-}
-
-void Logger::log(LogLevel level, const std::string& message) {
-    if (level < log_level_) {
-        return;
-    }
-    
-    writeLog(level, message);
-}
-
-void Logger::writeLog(LogLevel level, const std::string& message) {
-    std::lock_guard<std::mutex> lock(log_mutex_);
-    
-    std::string timestamp = getCurrentTimestamp();
-    std::string level_str = levelToString(level);
-    std::string log_line = "[" + timestamp + "] [" + level_str + "] " + message;
-    
-    // Write to console
-    if (console_output_) {
-        if (level >= LogLevel::ERROR) {
-            std::cerr << log_line << std::endl;
-        } else {
-            std::cout << log_line << std::endl;
-        }
-    }
-    
-    // Write to file
-    if (log_file_ && log_file_->is_open()) {
-        *log_file_ << log_line << std::endl;
-        log_file_->flush();
-    }
-}
-
-std::string Logger::levelToString(LogLevel level) const {
-    switch (level) {
-        case LogLevel::DEBUG:    return "DEBUG";
-        case LogLevel::INFO:     return "INFO";
-        case LogLevel::WARNING:  return "WARN";
-        case LogLevel::ERROR:    return "ERROR";
-        case LogLevel::CRITICAL: return "CRIT";
-        default:                 return "UNKNOWN";
-    }
-}
-
-std::string Logger::getCurrentTimestamp() const {
-    auto now = std::chrono::system_clock::now();
-    auto time_t = std::chrono::system_clock::to_time_t(now);
-    auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(
-        now.time_since_epoch()) % 1000;
-    
-    std::stringstream ss;
-    ss << std::put_time(std::localtime(&time_t), "%Y-%m-%d %H:%M:%S");
-    ss << '.' << std::setfill('0') << std::setw(3) << ms.count();
-    
-    return ss.str();
-}
-
-} // namespace BlueBoy
+} // namespace blueboy
